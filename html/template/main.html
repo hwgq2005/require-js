@@ -1,3 +1,10 @@
+<!--
+    {@helper numberPlus}
+        function(number) {
+            return number + 5;
+        }
+    {@/helper}
+-->
 <div class="list" style="padding:44px 0 60px;">
     <header class="bar bar-nav">
       <a class="icon icon-left-nav pull-left" href="javascript:history.back();"></a>
@@ -15,15 +22,6 @@
               1
             {@/if}
           </li>
-       
-          <!--
-          {@helper numberPlus}
-              function(number) {
-                  return number + 5;
-              }
-          {@/helper}
-          -->
-
           <li class="table-view-cell">    
               <a href="javascript:;" id="bbb">跳转  ${num | numberPlus}</a>
           </li>
@@ -38,7 +36,7 @@
         <span class="icon icon-person"></span>
         <span class="tab-label">添加数据</span>
       </a>
-      <a class="tab-item" h ref="#activity">
+      <a class="tab-item" href="#activity">
         <span class="icon icon-sound"></span>
         <span class="tab-label">摇一摇</span>
       </a>
