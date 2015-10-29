@@ -5,7 +5,7 @@
  * @version $Id$
  */
 
-define(['jquery','text!../../template/main.html'],function ($,addTmp){
+define(['jquery','juicer','text!../../template/main.html'],function ($,j,addTmp){
 		
 
 		var init=function(){

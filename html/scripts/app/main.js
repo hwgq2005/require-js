@@ -8,23 +8,22 @@ require.config({
 	baseUrl:'html/scripts',
 	paths: {
 		'jquery': 'frames/jquery.min',
-		'underscore': 'frames/underscore',
-		'backbone': 'frames/backbone',
+		'juicer':'frames/juicer',
 		'shake': 'app/shake',
 		'text': 'frames/text'
 	},
 	shim: {
-		zepto: {
+		jquery: {
 			exports: '$',
 
 		},
-		underscore: {
-			exports: '_'
-		},
-		backbone: {
-			deps: ['jquery','underscore'],
-			exports: 'Backbone'
-		},
+		// underscore: {
+		// 	exports: '_'
+		// },
+		// backbone: {
+		// 	deps: ['jquery','underscore'],
+		// 	exports: 'Backbone'
+		// },
 		shake:{
 			deps: ['jquery'],
 			exports: 'Shake'

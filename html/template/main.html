@@ -15,8 +15,17 @@
               1
             {@/if}
           </li>
+       
+          <!--
+          {@helper numberPlus}
+              function(number) {
+                  return number + 5;
+              }
+          {@/helper}
+          -->
+
           <li class="table-view-cell">    
-              <a href="javascript:;" id="bbb">跳转</a>
+              <a href="javascript:;" id="bbb">跳转  ${num | numberPlus}</a>
           </li>
       
     </ul>
