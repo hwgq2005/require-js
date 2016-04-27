@@ -1,10 +1,4 @@
-<!--
-    {@helper numberPlus}
-        function(number) {
-            return number + 5;
-        }
-    {@/helper}
--->
+
 <div class="list" style="padding:44px 0 60px;">
     <header class="bar bar-nav">
       <a class="icon icon-left-nav pull-left" href="javascript:history.back();"></a>
@@ -12,18 +6,17 @@
       <h1 class="title">App</h1>
     </header>
     <ul class="table-view" style="border-top:none;" id="table-list">
-        {@each list as it, k}
-          <li class="table-view-cell">${it.name} (index: ${k})</li>
-        {@/each}
+      
+        
+          <li class="table-view-cell"><%= num  %></li>
+        
+          <% include one.ejs %>
+          <!-- <%- include('shake.html'); %> -->
           <li class="table-view-cell">    
-             {@if num == 2}
-              2  
-             {@else}
-              1
-            {@/if}
+            
           </li>
           <li class="table-view-cell">    
-              <a href="javascript:;" id="bbb">跳转  ${num | numberPlus}</a>
+              <a href="javascript:;" id="bbb">跳转  </a>
           </li>
       
     </ul>
@@ -38,8 +31,7 @@
       </a>
       <a class="tab-item" href="#activity">
         <span class="icon icon-sound"></span>
-        <span class="tab-label">摇一摇</sp
-        an>
+        <span class="tab-label">摇一摇</span>
       </a>
       <a class="tab-item" href="#">
         <span class="icon icon-gear"></span>

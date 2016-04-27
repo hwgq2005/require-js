@@ -5,12 +5,11 @@
  * @version $Id$
  */
 
-define(['jquery','juicer','text!../../template/main.html'],function ($,j,addTmp){
+define(['jquery','ejs','text!template/two.ejs'],function ($,a,addTmp){
 		
-
 		var init=function(){
 				var data={
-					num:1,
+					num:123123,
 					list:[
 						{name:'guokai',show:true},
 						{name:'benben',show:false},
@@ -28,7 +27,11 @@ define(['jquery','juicer','text!../../template/main.html'],function ($,j,addTmp)
 						{num:4}
 					]
 				};
-				$('#main').html(juicer(addTmp,data))
+
+				console.log(addTmp)
+				// var html = ejs.render(addTmp, {user:{name:'test'});
+				var html = ejs.render(addTmp, data);
+				$('#main').html(html);
 
 				$('#bbb').click(function(event) {
 						require(['../view/shake'],function(shake){

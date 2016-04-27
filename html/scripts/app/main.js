@@ -5,17 +5,16 @@
  * @version $Id$
  */
 require.config({
-	baseUrl:'html/scripts',
+	baseUrl:'html',
 	paths: {
-		'jquery': 'frames/jquery.min',
-		'juicer':'frames/juicer',
-		'shake': 'app/shake',
-		'text': 'frames/text'
+		'jquery': 'scripts/frames/jquery.min',
+		'ejs':'scripts/frames/ejs',
+		'shake': 'scripts/app/shake',
+		'text': 'scripts/frames/text'
 	},
 	shim: {
 		jquery: {
 			exports: '$',
-
 		},
 		// underscore: {
 		// 	exports: '_'
@@ -28,8 +27,12 @@ require.config({
 			deps: ['jquery'],
 			exports: 'Shake'
 		}
+		,ejs: {
+			exports: 'ejs'
+		}
 	}
+	
 });
-require(['app/router'],function(router){
+require(['scripts/app/router'],function(router){
 	router.initlalize();
 })
