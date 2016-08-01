@@ -8,8 +8,9 @@
 define([
 	'jquery',
 	'ejs',
-	'text!template/one.ejs'
-],function ($,Ejs,addTmp){
+	'text!template/main.ejs',
+	'text!template/add.ejs',
+],function ($,Ejs,indexTmp,addTmp){
 		
 		var box = $('#main');
 
@@ -30,7 +31,7 @@ define([
 				})
 				.done(function(data) {
 					var data = data.data;
-					var html = ejs.render(addTmp, data);
+					var html = ejs.render(indexTmp, data);
 					box.html(html);
 				});
 			},
@@ -45,9 +46,19 @@ define([
 						require(['js/views/shake'],function(shake){
 							shake.rander();
 						})
+					}else if ( type === 'addsite') {
+						var html = ejs.render(addTmp);
+						box.html(html);
 					}
 
 				});
+
+				box.on('click', '.isedit', function(event) {
+					var html = ejs.render(addTmp);
+					box.html(html);
+				});
+
+				
 
 			}
 		}

@@ -5,37 +5,41 @@
  * @version $Id$
  */
 
-// define(['jquery','text!../template/shake.html','shake'],function ($,shakeViewTmp,shake){
-	
+// AMD写法(推荐这种)
+define([
+	'jquery',
+	'text!template/shake.ejs',
+	'shake'
+],function ($,shakeViewTmp,shake){
 	 
-	 
-// 		var indexView={
-// 			el:'#main',
-	
-// 			rander:function(){ 
-// 				$(this.el).html(juicer(shakeViewTmp,{}));
-// 				$(this.el).shake();
-// 			}
-// 		};
-
-// 		return indexView;
-// });
-
-define(function(require, exports, module) {  
-
-		var shakeViewTmp=require('text!template/shake.html');
-	 	var shake=require('shake');
 		var indexView={
-				el:'#main',
-		
-				rander:function(){ 
-					var html = ejs.render(shakeViewTmp, {});
-					$(this.el).html(html);
-					$(this.el).shake();
-				}
-			};
+			el:'#main',
+			rander:function(){ 
+				var html = ejs.render(shakeViewTmp, {});
+				$(this.el).html(html);
+				$(this.el).shake();
+			}
+		};
 
 		return indexView;
+});
+
+// CMD写法
+// define(function(require, exports, module) {  
+
+// 		var shakeViewTmp=require('text!template/shake.html');
+// 	 	var shake=require('shake');
+// 		var indexView={
+// 				el:'#main',
+		
+// 				rander:function(){ 
+// 					var html = ejs.render(shakeViewTmp, {});
+// 					$(this.el).html(html);
+// 					$(this.el).shake();
+// 				}
+// 			};
+
+// 		return indexView;
 	
-})  
+// })  
   
