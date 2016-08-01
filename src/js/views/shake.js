@@ -1,11 +1,11 @@
 /*
  *
- * @authors H君 (qq:262281610)
- * @date    2014-10-23 19:54:33
+ * @authors H君
+ * @date    2016-08-01 14:48:20
  * @version $Id$
  */
 
-// AMD写法(推荐这种)
+/*AMD写法(推荐这种)*/
 define([
 	'jquery',
 	'text!template/shake.ejs',
@@ -24,7 +24,7 @@ define([
 		return indexView;
 });
 
-// CMD写法
+/*CMD写法*/
 // define(function(require, exports, module) {  
 
 // 		var shakeViewTmp=require('text!template/shake.html');

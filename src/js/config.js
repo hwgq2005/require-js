@@ -18,7 +18,7 @@ require.config({
 		'shake': 'js/plugins/shake'
 	},
 
-	//依赖关系
+	// 依赖关系
 	shim: {
 		jquery: {
 			exports: '$',
@@ -32,7 +32,7 @@ require.config({
 		}
 	},
 
-	//避免加载超时
+	// 避免加载超时
 	waitSeconds: 0
 	
 });
