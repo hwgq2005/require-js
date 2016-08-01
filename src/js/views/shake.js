@@ -23,13 +23,14 @@
 
 define(function(require, exports, module) {  
 
-		var shakeViewTmp=require('text!../template/shake.html');
+		var shakeViewTmp=require('text!template/shake.html');
 	 	var shake=require('shake');
 		var indexView={
 				el:'#main',
 		
 				rander:function(){ 
-					$(this.el).html(juicer(shakeViewTmp,{}));
+					var html = ejs.render(shakeViewTmp, {});
+					$(this.el).html(html);
 					$(this.el).shake();
 				}
 			};
