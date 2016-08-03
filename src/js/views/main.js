@@ -2,7 +2,7 @@
  *
  * @authors H君
  * @date    2016-08-01 14:48:20
- * @version $Id$
+ * @version 1.0
  */
 
 define([
