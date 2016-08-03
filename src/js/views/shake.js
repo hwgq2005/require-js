@@ -9,8 +9,8 @@
 define([
 	'jquery',
 	'text!template/shake.ejs',
-	'shake'
-],function ($,shakeViewTmp,shake){
+	'tShake'
+],function ($,shakeViewTmp){
 	 
 		var indexView={
 			el:'#main',

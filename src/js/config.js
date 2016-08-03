@@ -15,7 +15,8 @@ require.config({
 		'jquery' : 'js/plugins/jquery.min',
 		'ejs'	 : 'js/plugins/ejs',
 		'text'	 : 'js/plugins/text',
-		'shake'	 : 'js/plugins/t-shake'
+		'css'    : 'js/plugins/require-css/css',
+		'tShake' : 'js/plugins/t-shake'
 	},
 
 	// 依赖关系
@@ -23,18 +24,12 @@ require.config({
 		jquery: {
 			exports: '$',
 		},
-		shake:{
+		tShake:{
 			deps: ['jquery','css!../src/css/views/shake.css'],
-			exports: 'Shake'
+			exports: 'tShake'
 		},
 		ejs: {
 			exports: 'ejs'
-		}
-	},
-
-	map: {
-		'*': {
-			'css': 'js/plugins/require-css/css'
 		}
 	},
 
