@@ -1,8 +1,8 @@
 /*
  *
  * @authors H君
- * @date    2014-10-21 13:42:47
- * @version $Id$
+ * @date    2016-08-03 10:13:26
+ * @version 1.0
  */
 
 require.config({
@@ -12,10 +12,10 @@ require.config({
 
 	// 基于baseUrl路径配置
 	paths: {
-		'jquery': 'js/plugins/jquery.min',
-		'ejs':'js/plugins/ejs',
-		'text': 'js/plugins/text',
-		'shake': 'js/plugins/shake'
+		'jquery' : 'js/plugins/jquery.min',
+		'ejs'	 : 'js/plugins/ejs',
+		'text'	 : 'js/plugins/text',
+		'shake'	 : 'js/plugins/t-shake'
 	},
 
 	// 依赖关系
@@ -24,11 +24,17 @@ require.config({
 			exports: '$',
 		},
 		shake:{
-			deps: ['jquery'],
+			deps: ['jquery','css!../src/css/views/shake.css'],
 			exports: 'Shake'
-		}
-		,ejs: {
+		},
+		ejs: {
 			exports: 'ejs'
+		}
+	},
+
+	map: {
+		'*': {
+			'css': 'js/plugins/require-css/css'
 		}
 	},
 
